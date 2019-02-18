@@ -2,6 +2,7 @@ package com.steeleEnterprise.robert.spark.utils
 
 import java.util.logging.Logger
 
+
 object DFUtils extends Serializable {
 
     @transient lazy val logger = Logger.getLogger(getClass.getName)

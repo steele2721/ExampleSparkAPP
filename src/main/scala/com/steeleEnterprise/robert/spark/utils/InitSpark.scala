@@ -3,14 +3,13 @@ package com.steeleEnterprise.robert.spark.utils
 import org.apache.log4j.{Level, LogManager, Logger}
 import org.apache.spark.sql.SparkSession
 
-//trait for extending all spark jobs
+//trait for extending spark jobs
 
 trait InitSpark {
 
   val spark: SparkSession = SparkSession.builder()
     .master("local[*]")
     .appName("spark-app")
-    .enableHiveSupport()
     .getOrCreate()
 
   val sc = spark.sparkContext
